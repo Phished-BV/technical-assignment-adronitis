@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Phished\Deliveroo\Database\Factories\OrderItemFactory;
 
 class OrderItem extends Model
 {
@@ -25,5 +26,10 @@ class OrderItem extends Model
     public function getDetails(): string
     {
         return $this->quantity.'x '.$this->item;
+    }
+
+    protected static function newFactory()
+    {
+        return OrderItemFactory::new();
     }
 }

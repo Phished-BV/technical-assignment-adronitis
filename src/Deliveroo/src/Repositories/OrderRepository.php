@@ -23,6 +23,7 @@ class OrderRepository implements OrderRepositoryInterface
             'street'                    => $orderDTO->street,
             'city'                      => $orderDTO->city,
             'country'                   => $orderDTO->country,
+            'postal_code'               => $orderDTO->postalCode,
             'phone'                     => $orderDTO->phone,
             'delivery_cost'             => $orderDTO->deliveryCost,
             'sub_total'                 => $orderDTO->subTotal,

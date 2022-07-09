@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Phished\Deliveroo\UI\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use Phished\Deliveroo\Contracts\OrderRepositoryInterface;
 

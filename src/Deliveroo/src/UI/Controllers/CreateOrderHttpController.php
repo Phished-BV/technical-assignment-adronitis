@@ -22,6 +22,7 @@ class CreateOrderHttpController extends Controller
     public function __invoke(
         CreateOrderRequest $request
     ): JsonResponse {
+        
         $createdOrder = $this->orderRepository->createOrder(CreateOrderDTO::fromRequest($request));
 
         return response()->json($createdOrder, Response::HTTP_CREATED);

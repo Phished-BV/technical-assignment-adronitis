@@ -8,12 +8,9 @@ use Phished\Deliveroo\Models\User;
 use Phished\Deliveroo\Models\Order;
 use Illuminate\Support\Facades\Mail;
 use Phished\Deliveroo\Tests\TestCase;
-use Illuminate\Support\Facades\Config;
-use Phished\Deliveroo\Entities\Recipient;
 use Phished\Deliveroo\Services\OrderService;
 use Phished\Deliveroo\Transports\EmailTransport;
 use Phished\Deliveroo\Contracts\OrderServiceInterface;
-use Phished\Deliveroo\Database\Factories\DTO\RecipientDTOFactory;
 
 class CanSendEmailTest extends TestCase
 {

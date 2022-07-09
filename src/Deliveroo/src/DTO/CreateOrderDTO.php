@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phished\Deliveroo\DTO\CreateOrderDTO;
+namespace Phished\Deliveroo\DTO;
 
 use Phished\Deliveroo\UI\Requests\CreateOrderRequest;
 
@@ -27,18 +27,17 @@ class CreateOrderDTO
     public static function fromRequest(CreateOrderRequest $request): static
     {
         $validated = $request->safe();
-
+      
         foreach($validated->orderItems as $item){
-            $items = [
-                'orderId' => $item->orderId,
-                'item' => $item->item,
-                'quantity' => $item->quantity,
-                'price' => $item->price,
+            $items[] = [
+                'item' => $item['item'],
+                'quantity' => $item['quantity'],
+                'price' => $item['price'],
             ];
         }
-
+        
         return new self(
-            userId: $validated->userID,
+            userId: $validated->userId,
             orderItems: $items,
             houseNumber: $validated->houseNumber,
             houseNumberAddition: $validated->houseNumberAddition,
@@ -47,6 +46,9 @@ class CreateOrderDTO
             postalCode: $validated->postalCode,
             country: $validated->country,
             phone: $validated->phone,
+            subTotal: $validated->subTotal,
+            deliveryCost: $validated->deliveryCost,
+            total: $validated->total,
         );
     }
 }

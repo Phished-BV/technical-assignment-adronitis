@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Phished\Deliveroo\UI\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Response;
 use Phished\Deliveroo\Contracts\OrderRepositoryInterface;
 
 class GetOrdersHttpController extends Controller

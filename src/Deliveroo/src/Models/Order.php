@@ -65,7 +65,7 @@ class Order extends Model
     }
 
     protected static function newFactory()
-{
-    return OrderFactory::new();
-}
+    {
+        return OrderFactory::new();
+    }
 }

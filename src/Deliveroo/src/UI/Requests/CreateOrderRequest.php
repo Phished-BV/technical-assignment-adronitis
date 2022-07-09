@@ -15,6 +15,7 @@ class CreateOrderRequest extends FormRequest
             'userId'                => 'required',
             'orderItems'            => 'required',
             'houseNumber'           => 'required',
+            'houseNumberAddition'   => 'required',
             'street'                => 'required',
             'city'                  => 'required',
             'postalCode'            => 'required',
